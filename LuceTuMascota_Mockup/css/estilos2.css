@@ -118,3 +118,8 @@ nav.navbar>.row{
     margin-top: 30px;
 }
 
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
