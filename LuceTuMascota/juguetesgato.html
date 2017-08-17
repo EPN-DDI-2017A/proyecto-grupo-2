@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Luce tu mascota</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <div class="row">
+            <div class="col-3 justify-content-center">
+                <a class="navbar-brand" href="index.html">
+                    <img id="logo" src="./images/logo1.png" alt="Logo luce tu mascota">
+                </a>
+            </div>
+            <div class="col-9">
+                <div id="contactos" class="row">
+                    <div class="col-10">
+                        <div class="row justify-content-end">
+                            <button class="btn btn-secondary" data-toggle="modal" id="sesion" data-target="#myModal">Iniciar sesión</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Iniciar sesión</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form>
+                                      <div class="form-group">
+                                        <label for="nom_usuario">Usuario</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="contraseña">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave1" placeholder="contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Iniciar sesión</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                            <button class="btn btn-secondary" data-toggle="modal" id="registro" data-target="#myModal1">Registrarse</button>
+
+                            <input type="text" id="usuario">
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal1">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Registrarse</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="" >
+                                      <div class="form-group">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="usuario_registro">Usuario</label>
+                                        <input type="text" class="form-control" id="usuario_registro" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email">Correo electrónico</label>
+                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="clave">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave" placeholder="contraseña">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="repetirclave">Repetir contraseña</label>
+                                        <input type="password" class="form-control" id="repetirclave" placeholder="Repetir contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="enviar" data-dismiss="modal" >Listo</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="sociales">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                             <div  class="col-lg-1" id="sociales2">
+                            <br>
+                            <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="nav nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+                    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+                </div>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="politicas.html">Como comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactanos.html" >Contáctanos</a>
+                </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="contenedor2">
+<div class="centro">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="./images/gatito.jpg" alt="Card image cap">
+                    <div class="card-block">
+
+                 <center><img src="./images/icon2.png"><h4 class="card-title">Novedades</h4></center>
+                <p class="card-text">Consiente al miembro de tu Familia </p> 
+             </div>
+            <div class="card-block">
+                <ul class="list-group list-group-flush">
+                  <a href="accesoriosgatito.html" class="card-link">Collares, arnes y correas</a>
+                  <a href="camasgatos.html" class="card-link">Camas y Transportadoras</a> 
+                  <a href="arenasgatos.html" class="card-link">Arenas</a>
+                  <a href="rascadoresgatos.html" class="card-link">Rascadores y Gimnasio</a>  
+                  <a href="juguetesgato.html" class="card-link">Juguetes</a>    
+                </ul>
+    
+                </div>
+            </div>
+        </div>
+
+
+<div class="col-md-8">
+<div class="card-deck">
+<!--1-->
+  <div class="card">
+    <img class="card-img-top" id="imagen1" src="./images/zanahoria.jpg" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"> Refillables Zanahoria para gatos con catnip<br></h4><br><br>
+
+      <h6> Precio: $4,39</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/zanahoria.jpg" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Refillables Zanahoria para gatos con catnip<br>
+               </h6>
+              <small>La tela de los muñecos es de excelente calidad, suave y puede lavarse en la lavarropas quitando previamente la bolsita del interior.</small><br>
+              <h6> Precio: $4,39</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+
+<!--2-->
+  <div class="card">
+    <img class="card-img-top" src="./images/bola.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Dispensador de Golosinas Funkitty Egg<br></h4><br><br>
+      <h6> Precio: $8,72</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/bola.png"" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Dispensador de Golosinas Funkitty Egg<br>
+               </h6>
+              <small>Con este dispensador estimulará todos los sentidos de su mascota. Entrenará el olfato, la imaginación y la inteligencia.</small><br>
+              <h6> Precio: $8,72</h6> 
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+</div>
+<!--3-->
+  <div class="card">
+    <img class="card-img-top" src="./images/juguete3.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Juguete para gatos Happy pelota con luz<br></h4>
+      <br><br>
+      <h6> Precio: $3,49</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal3">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/juguete3.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Juguete para gatos Happy pelota con luz<br>
+               </h6>
+              <small>El juguete para gatos Happy Fashion es una pelota de goma de alegres colores surtidos , que tiene la particularidad de tener una luz intermitente en su interior</small><br>
+              <h6> Precio: $3,49</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+</div>
+</div>
+
+    </div>
+</div>
+</div>
+
+<!--div de la parte de abajo-->
+<div class="contenedor3">
+    <div class="centro">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 16rem;">                  
+            </div>
+        </div>
+<div class="col-md-8">
+<div class="card-deck">
+<!--6-->
+
+  <div class="card">
+    <img class="card-img-top" id="imagen1" src="./images/juguete4.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Gusanos de piel sintetica con catnip para gatos</h4>
+      <br>
+      <h6> Precio: $3,00</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal4">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/juguete4.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Gusanos de piel sintetica con catnip para gatos<br>
+               </h6>
+              <small>Este juguete es muy alegre y colorido. Los pelos largos resultan muy atractivos por el movimiento que generan y las distintas caras son muy graciosas.</small><br>
+              <h6> Precio: $3,00</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+<!--7-->
+  <div class="card">
+    <img class="card-img-top" src="./images/ratonsito2.png" alt="Card image cap">
+    <div class="card-block"><br>
+      <h4 class="card-title">Juguete para gatos Irresistibles ratones<br></h4><br>
+      <h6> Precio: $2,39</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal5">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal5">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/raton1.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Juguete para gatos Irresistibles ratones con catnip <br>
+               </h6>
+              <small> La textura de sus materiales encantará a tu mascota y sus colores atraerán su atención. Además, están rellenos con catnip (una hierba con aroma a menta que fascina a todos los gatos)</small><br>
+              <h6> Precio: $2,39</h6>  
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+  <!--8-->
+  <div class="card">
+    <img class="card-img-top" src="./images/plumas1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Juguete para gatos Irresistible pelota con plumas</h4>
+  
+      <h6> Precio: $3,99</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal6">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/plumas1.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Juguete para gatos Irresistible pelota con plumas<br>
+               </h6>
+              <small>Su textura suave y blanda les encantará y podrán morderlo sin hacerse daño en los dientes</small><br>
+              <h6> Precio: $3,99</h6> 
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+</div>
+</div>
+
+    </div>
+</div>
+</div>
+
+ <!-- Footer -->
+       <!-- Footer -->
+<footer>
+  <div class="row">
+      <div class="col-lg-2">
+          <img src="./images/logoi.png">
+      </div>
+
+      <div class="col-lg-5">
+      <br>
+      <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.html">Inicio</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+    <div class="dropdown-menu">
+    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="politicas.html">Como comprar</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="contactanos.html">Contáctanos</a>
+  </li>
+</ul>
+      </div>
+
+<div class="col-lg-3">
+  <br><br><br>
+  <p>Copyright &copy; Luce tu mascota 2017</p>
+</div>
+<div  class="col-lg-1" id="sociales2">
+<br>
+ <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+<div>
+  </div>
+</footer>
+</div>
+
+
+
+
+
+<!---->
+
+
+
+
+    
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

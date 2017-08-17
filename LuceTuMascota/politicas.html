@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Luce tu mascota</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <div class="row">
+            <div class="col-3 justify-content-center">
+                <a class="navbar-brand" href="index.html">
+                    <img id="logo" src="./images/logo1.png" alt="Logo luce tu mascota">
+                </a>
+            </div>
+            <div class="col-9">
+                <div id="contactos" class="row">
+                    <div class="col-10">
+                        <div class="row justify-content-end">
+                            <button class="btn btn-secondary" data-toggle="modal" id="sesion" data-target="#myModal">Iniciar sesión</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Iniciar sesión</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form>
+                                      <div class="form-group">
+                                        <label for="nom_usuario">Usuario</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="contraseña">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave1" placeholder="contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Iniciar sesión</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                            <button class="btn btn-secondary" data-toggle="modal" id="registro" data-target="#myModal1">Registrarse</button>
+
+                            <input type="text" id="usuario">
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal1">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Registrarse</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="" >
+                                      <div class="form-group">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="usuario_registro">Usuario</label>
+                                        <input type="text" class="form-control" id="usuario_registro" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email">Correo electrónico</label>
+                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="clave">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave" placeholder="contraseña">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="repetirclave">Repetir contraseña</label>
+                                        <input type="password" class="form-control" id="repetirclave" placeholder="Repetir contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="enviar" data-dismiss="modal" >Listo</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="sociales">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                             <div  class="col-lg-1" id="sociales2">
+                            <br>
+                            <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="nav nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+                    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+                </div>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="politicas.html">Como comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactanos.html" >Contáctanos</a>
+                </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="contenedor2">
+<div class="contenedor_politicas">
+<div class="politicas">
+    <center><h4><img  src="./images/icon1.png">Tus compras son seguras y rápidas</h4></center>
+ 
+  <div class="card-block">
+</div>
+
+<div class="jumbotron">
+  <h6 class="display-4"><img  src="./images/icon2.png">¿Retira o el enviamos el producto? </h6>
+  <p class="lead"><strong>Opción 1. Retirar el producto en el local de Quito</strong></p>
+  <br>
+  <p class="lead"><strong>Horario de atención:</strong> Lunes a Viernes de 9:00am a 17:00pm</p>
+  <p class="lead"><strong>Dirección:</strong> Lugo N22-87 y Ladrón de Guevara</p>
+  <p class="lead"><strong>Teléfono:</strong> (02)5008060 / Whatsapp 0984341508</p>
+  <p class="lead"><strong>Pagos:</strong> Se aceptan pagos en efectivo y todas la tarjetas de crédito</p>
+  <hr class="my-4">
+  <p class="lead"><strong>Opción 2. Envios a todo el Ecuador 24 horas -Quito</strong></p>
+  <br>
+  <p class="lead" align="justify"> Para entregos a cualquier parte del Ecuador, debe hacer un deposito o transferencia del Pichincha; cuenta corriente N° 30918283, al Nombre de: Cristhina Zambrano.
+  El valor del envio para todo el Ecuador es de: $3usd. Para la ciudad de Quito tiene un valor estándar de $2usd y $3usd si es entrega exprés.<br>
+  En cuanto se realice este pago enviar un WhatsApp o Email con sus datos de entrega exactos (nombres completos, direccion y teléfono) y despacharemos de inmediato.
+  <br>
+  Tambien puede realizar la compra de forma directa desde el carrito de compras de nuestra página. 
+  <br>Todos nuestros envios están grarantizados y se hacen con seguimiento online. Puede contactarnos a WhatsApp 0984341508 o al email: lucetumascota@hotmail.com
+  <br>
+  </p>
+  
+</div>
+
+    
+<br>
+<br>
+</div>
+</div>
+ <!-- Footer -->
+<!-- Footer -->
+<footer>
+  <div class="row">
+      <div class="col-lg-2">
+          <img src="./images/logoi.png">
+      </div>
+
+      <div class="col-lg-5">
+      <br>
+      <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.html">Inicio</a>
+  </li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+    <div class="dropdown-menu">
+    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="politicas.html">Como comprar</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="contactanos.html">Contáctanos</a>
+  </li>
+</ul>
+      </div>
+
+<div class="col-lg-3">
+  <br><br><br>
+  <p>Copyright &copy; Luce tu mascota 2017</p>
+</div>
+<div  class="col-lg-1" id="sociales2">
+<br>
+ <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+<div>
+  </div>
+</footer>
+ </div>
+
+
+
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

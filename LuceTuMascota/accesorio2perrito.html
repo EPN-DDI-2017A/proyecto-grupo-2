@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Luce tu mascota</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <div class="row">
+            <div class="col-3 justify-content-center">
+                <a class="navbar-brand" href="index.html">
+                    <img id="logo" src="./images/logo1.png" alt="Logo luce tu mascota">
+                </a>
+            </div>
+            <div class="col-9">
+                <div id="contactos" class="row">
+                    <div class="col-10">
+                        <div class="row justify-content-end">
+                            <button class="btn btn-secondary" data-toggle="modal" id="sesion" data-target="#myModal">Iniciar sesión</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Iniciar sesión</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form>
+                                      <div class="form-group">
+                                        <label for="nom_usuario">Usuario</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="contraseña">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave1" placeholder="contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Iniciar sesión</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                            <button class="btn btn-secondary" data-toggle="modal" id="registro" data-target="#myModal1">Registrarse</button>
+
+                            <input type="text" id="usuario">
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal1">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Registrarse</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="" >
+                                      <div class="form-group">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="usuario_registro">Usuario</label>
+                                        <input type="text" class="form-control" id="usuario_registro" placeholder="Nombre de usuario">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email">Correo electrónico</label>
+                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="clave">Contraseña</label>
+                                        <input type="password" class="form-control" id="clave" placeholder="contraseña">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="repetirclave">Repetir contraseña</label>
+                                        <input type="password" class="form-control" id="repetirclave" placeholder="Repetir contraseña">
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="enviar" data-dismiss="modal" >Listo</button>
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="sociales">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                             <div  class="col-lg-1" id="sociales2">
+                            <br>
+                            <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="row justify-content-end" id="menu-principal " >
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="nav nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+                    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+                </div>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="politicas.html">Como comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactanos.html" >Contáctanos</a>
+                </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="contenedor2">
+<div class="centro">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="./images/images.jpg" alt="Card image cap">
+                    <div class="card-block">
+
+                 <center><img src="./images/icon1.png"><h4 class="card-title">Novedades</h4></center>
+                <p class="card-text">Consiente al miembro de tu Familia </p> 
+             </div>
+            <div class="card-block">
+                <ul class="list-group list-group-flush">
+                  <a href="accesoriosperrito.html" class="card-link">Bebederos y Comederos</a>  
+                  <a href="accesorio2perrito.html" class="card-link">Bolsas de transporte</a>  
+                  <a href="casasperro.html" class="card-link">Casas</a> 
+                  <a href="collaresperro.html" class="card-link">Collares, arnes y correas</a> 
+                  <a href="ropaperro.html" class="card-link">Ropa y accesorios</a>  
+                  <a href="juguetesperro.html" class="card-link">Juguetes</a>    
+                </ul>
+    
+                </div>
+            </div>
+        </div>
+<div class="col-md-8">
+<div class="card-deck">
+<!--1-->
+  <div class="card">
+    <img class="card-img-top" id="imagen1" src="./images/bolsa1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Mochila Frontal para mascotas<br></h4><br><br><br>
+      <h6> Precio: $35,36</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal6">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/bolsa1.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Mochila Frontal para Mascotas<br>
+               </h6>
+              <small>La mochila es muy cómoda pera nuestra mascota y reforzada para nuestros hombros.<br>
+              Medidas: 30 x 33 x 26cm, para un peso máximo de 10kg</small>
+              <h6> Precio: $35,36</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+
+<!--2-->
+  <div class="card">
+    <img class="card-img-top" src="./images/maletak.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Bolso con cabeza libre para para perros minuaturas<br></h4><br>
+      <h6> Precio: $20,50</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal7">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal7">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/maletak.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Bolso con cabeza libre para para paseos perros minuaturas<br>
+               </h6>
+              <small>Gracias a la apertura ajustable, puede cerrar la ventana cuando el perro está dormido o descansando.</small>
+              <h6>Precio: $20,50</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+</div>
+<!--3-->
+  <div class="card">
+    <img class="card-img-top" src="./images/lona.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Maleta Bolso en lona económico<br></h4><br><br>
+      <h6> Precio: $10,00</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal11">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal11">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/lona.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Maleta Bolso en lona económico<br>
+               </h6>
+              <small> El diseño es con una abertura para que el perro pueda sacar la cabeza y tenga buena ventilación cuando está durmiendo.</small><br>
+              <h6> Precio: $10,00</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+</div>
+</div>
+
+    </div>
+</div>
+</div>
+
+<!--div de la parte de abajo-->
+<div class="contenedor3">
+    <div class="centro">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 16rem;">                  
+            </div>
+        </div>
+<div class="col-md-8">
+<div class="card-deck">
+<!--6-->
+
+  <div class="card">
+    <img class="card-img-top" id="imagen1" src="./images/antibacterinopet.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Bolsa de transporte antibacteriano<br></h4><br>
+      <h6> Precio: $45,00</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal12">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal12">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/antibacterinopet.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Bolsa de transporte antibacteriano ALTER EGO<br>
+               </h6>
+              <small> Su tejido última generación antibacteriano, es anti-manchas y fácil de lavar y rápido secado.</small>
+              <h6> Precio: $45,00</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+<!--7-->
+  <div class="card">
+    <img class="card-img-top" src="./images/alforja.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Alforja Mochila Para Perros + Bebedero de Viaje<br></h4>
+      <h6> Precio:$21,00</h6> 
+    </div>
+    <div class="card-footer">
+     <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal13">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal13">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/alforja.png" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Alforja Mochila Para Perros + Bebedero de Viaje<br>
+               </h6>
+              <small>Tiene: 2 bolsas con cierre por cremallera, un bolsillo de red en cada bolsa
+                    <br> Y Almohadillas protectoras para el roce</small><br>
+              <h6> Precio: $21,00</h6>
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+  <!--8-->
+  <div class="card">
+    <img class="card-img-top" src="./images/bolsaperro1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Transportin Para Perro Gulliver Nº 1-2<br></h4>
+      <h6> Precio: $12,00</h6> 
+    </div>
+    <div class="card-footer">
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal14">Comprar</button></center>
+      <!-- Modal -->
+<div class="modal fade" id="myModal14">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <img class="card-img-top" id="imagen1" src="./images/color.jpg" alt="Card image cap">
+              <br>
+          </div>
+            <div class="col">
+             <br>
+               <h6 class="card-title">Transportin Para Perro Gulliver Nº 1-2<br>
+               </h6>
+             <small>Se compone por dos piezas que se pueden montar y desmontar fácilmente para facilitar su limpieza o guardarlo<br> colores: rosado y azul</small><br>
+              <h6> Precio: $12,00</h6> 
+            </div>
+        </div>
+         </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+               </div>
+             </div>
+           </div>
+      </div>
+  </div>
+</div>
+</div>
+
+    </div>
+</div>
+</div>
+
+ <!-- Footer -->
+        <!-- Footer -->
+<footer>
+  <div class="row">
+      <div class="col-lg-2">
+          <img src="./images/logoi.png">
+      </div>
+
+      <div class="col-lg-5">
+      <br>
+      <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.html">Inicio</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accesorios</a>
+
+    <div class="dropdown-menu">
+    <a class="dropdown-item" href="accesoriosperrito.html">Perros</a>
+    <a class="dropdown-item" href="accesoriosgatito.html">Gatos</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="politicas.html">Como comprar</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="contactanos.html">Contáctanos</a>
+  </li>
+</ul>
+      </div>
+
+<div class="col-lg-3">
+  <br><br><br>
+  <p>Copyright &copy; Luce tu mascota 2017</p>
+</div>
+<div  class="col-lg-1" id="sociales2">
+<br>
+ <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
+
+<div>
+  </div>
+</footer>
+</div>
+
+
+
+
+<!---->
+
+
+
+
+    
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
