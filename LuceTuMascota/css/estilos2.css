@@ -1,5 +1,4 @@
-body{
-    
+body {
 }
 
 nav.navbar {
@@ -147,4 +146,15 @@ footer{
     margin-right: 5px;
 }
 /**/
+label.error {
+    color: #d9534f;
+}
+
+.form-control.error {
+    border-color: #d9534f;
+}
+
+.form-control.valid {
+    border-color: #00aa00;
+}
 

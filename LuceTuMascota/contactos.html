@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="css/thumbnail-gallery.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+
 </head>
 
 <body>
@@ -103,7 +108,7 @@
                             <div id="sociales">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             </div>
-                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                            <button class="btn btn-warning producto" type="submit" href="carritocompra.html" >Carrito</button>
                              <div  class="col-lg-1" id="sociales2">
                             <br>
                             <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
@@ -269,5 +274,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+
+<!-- jQuery carrito -->
+  <script src="minicart.js"></script>
+  <script>
+    paypal.minicart.render({
+      strings:{
+        button:'Pagar'
+        ,buttonAlt:"Total"
+        ,subtotal:'Total:'
+        ,empty:'No hay productos en el carrito'
+      }
+    });
+
+    <!--eventos agregar carrito-->
+      $('.producto').click(function(e){
+        e.stopPropagation();
+        paypal.minicart.cart.add({
+          business:'rpozo@argos.com.ec',
+          item_name:$(this).attr("titulo"),
+          amount:$(this).attr("precio"),
+          currency_code:'USD',
+
+        });
+      });
+
+  </script>
+
+
 </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Luce tu mascota</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/estilos2.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -53,58 +55,70 @@
                                 </div>
                               </div>
                             </div>
+                            <!--boton para registro-->
+                            <a class="btn btn-primary" href="datos.php" role="button">Registrate</a>
+                            
 
+                            
+<!--
                             
                             <button class="btn btn-secondary" data-toggle="modal" id="registro" data-target="#myModal1">Registrarse</button>
 
                             <input type="text" id="usuario">
+-->
 
                             <!-- Modal -->
-                            <div class="modal fade" id="myModal1">
+<!--                            <div class="modal fade" id="myModal1">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h5 class="modal-title">Registrarse</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+-->                                   <!--<button type="button" href="datos.php" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    </button>-->
+<!--                                    <button type="button" href="datos.php" class="close">RE</button>
                                   </div>
                                   <div class="modal-body">
                                     <form action="" >
                                       <div class="form-group">
-                                        <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                                        <label class="form-control-label" for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp" placeholder="Nombre y apellido">
                                       </div>
                                       <div class="form-group">
-                                        <label for="usuario_registro">Usuario</label>
-                                        <input type="text" class="form-control" id="usuario_registro" placeholder="Nombre de usuario">
+                                        <label for="usuario">Usuario</label>
+                                        <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp" placeholder="Nombre de usuario">
                                       </div>
                                       <div class="form-group">
                                         <label for="email">Correo electrónico</label>
-                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="E-mail" placeholder="Ingrese su email">
+                                        <small id="emailHelp" class="form-text text-muted">Ingrese un mail con el formato usuario@email.com</small>
                                       </div>
                                       <div class="form-group">
                                         <label for="clave">Contraseña</label>
-                                        <input type="password" class="form-control" id="clave" placeholder="contraseña">
+                                        <input type="password" class="form-control" id="clave" name="clave" aria-describedby="claveHelp" placeholder="contraseña">
+                                        <small id="claveHelp" class="form-text text-muted">Su clave debe contener a menos 5 caracteres.</small>
                                       </div>
                                       <div class="form-group">
                                         <label for="repetirclave">Repetir contraseña</label>
-                                        <input type="password" class="form-control" id="repetirclave" placeholder="Repetir contraseña">
+                                        <input type="password" class="form-control" id="repetirclave"  name="repetirclave" aria-describedby="repetirclaveHelp" placeholder="Repetir contraseña">
+                                        <small id="repetirclaveHelp" class="form-text text-muted">Vuelva a ingresar su clave.</small>
                                       </div>
                                     </form>
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" id="enviar" data-dismiss="modal" >Listo</button>
-                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
-                                  </div>
+-->                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+<!--                                  </div>
                                 </div>
                               </div>
                             </div>
+-->
+
 
                             <div id="sociales">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             </div>
-                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                            <button class="btn btn-warning producto" type="submit" href="carritocompra.html" >Carrito</button>
                             <div  class="col-lg-1" id="sociales2">
                             <br>
                             <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
@@ -284,5 +298,46 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.-js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/localization/messages_es_PE.min.js"></script>
+<script src="js/main3.js"></script>
+
+
+<!-- jQuery carrito -->
+  <script src="minicart.js"></script>
+  <script>
+    paypal.minicart.render({
+      strings:{
+        button:'Pagar'
+        ,buttonAlt:"Total"
+        ,subtotal:'Total:'
+        ,empty:'No hay productos en el carrito'
+      }
+    });
+
+    <!--eventos agregar carrito-->
+      $('.producto').click(function(e){
+        e.stopPropagation();
+        paypal.minicart.cart.add({
+          business:'rpozo@argos.com.ec',
+          item_name:$(this).attr("titulo"),
+          amount:$(this).attr("precio"),
+          currency_code:'USD',
+
+        });
+      });
+
+  </script>
+
+
+
+
+
+
 </body>
 </html>

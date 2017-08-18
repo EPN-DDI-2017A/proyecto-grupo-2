@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Luce tu mascota</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilos2.css">
     <link href="css/thumbnail-gallery.css" rel="stylesheet">
+
+    <script src="bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -103,7 +107,7 @@
                             <div id="sociales">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             </div>
-                            <button class="btn btn-warning" type="submit" href="carritocompra.html" >Carrito</button>
+                            <button class="btn btn-warning producto" type="submit" href="carritocompra.html" >Carrito</button>
                              <div  class="col-lg-1" id="sociales2">
                             <br>
                             <i class="fa fa-facebook" aria-hidden="true"><i class="fa fa-twitter" aria-hidden="true"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></i>
@@ -214,7 +218,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button href"#" type="button" class="btn btn-primary producto" precio="9.60" titulo="Comedero y Bebedero">+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -231,7 +235,7 @@
       <h6> Precio: $6,65</h6>
     </div>
     <div class="card-footer">
-      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Comprar</button></center>
+      <center><button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal2">Comprar</button></center>
       <!-- Modal -->
 <div class="modal fade" id="myModal2">
   <div class="modal-dialog" role="document">
@@ -258,7 +262,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button type="button" class="btn btn-primary producto" precio="6.65" titulo="Botella Viajera">+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -301,7 +305,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button type="button" class="btn btn-primary producto" precio="2.55" titulo="Plato doble azul">+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -335,7 +339,7 @@
       <h6> Precio: $15,97</h6> 
     </div>
     <div class="card-footer">
-     <center> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Comprar</button></center>
+     <center> <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal4">Comprar</button></center>
       <!-- Modal -->
 <div class="modal fade" id="myModal4">
   <div class="modal-dialog" role="document">
@@ -362,7 +366,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button type="button" class="btn btn-primary producto producto" precio="15.97" titulo="Pelota dispensador"  >+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -406,7 +410,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button type="button" class="btn btn-primary producto" precio="3.47" titulo="Tomatodo 500ml" >+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -449,7 +453,7 @@
         </div>
          </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary">+ Añadir al carrito </button>
+            <button type="button" class="btn btn-primary producto" precio="90.38" titulo="Plato Programable" >+ Añadir al carrito </button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                </div>
@@ -513,5 +517,36 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+
+
+<!-- jQuery carrito -->
+  <script src="minicart.js"></script>
+  <script>
+    paypal.minicart.render({
+      strings:{
+        button:'Pagar'
+        ,buttonAlt:"Total"
+        ,subtotal:'Total:'
+        ,empty:'No hay productos en el carrito'
+      }
+    });
+
+    <!--eventos agregar carrito-->
+      $('.producto').click(function(e){
+        e.stopPropagation();
+        paypal.minicart.cart.add({
+          business:'rpozo@argos.com.ec',
+          item_name:$(this).attr("titulo"),
+          amount:$(this).attr("precio"),
+          currency_code:'USD',
+
+        });
+      });
+
+  </script>
+
+
+
+
 </body>
 </html>
