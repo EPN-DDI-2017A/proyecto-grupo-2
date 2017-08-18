@@ -1,3 +1,20 @@
+.container{
+    width: 80%;
+    margin:0 auto;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.main{
+    width: 100%;
+    margin:0 auto;
+}
+
+.title{
+    width: 100%;
+    margin:0 auto;
+}
+
 body{
     
 }
