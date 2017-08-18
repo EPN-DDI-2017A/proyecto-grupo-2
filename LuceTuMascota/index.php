@@ -140,6 +140,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contactanos.html" >Contáctanos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html ?>" >Cerrar Sesión</a>
+                </li>
                     </ul>
                     </div>
                 </div>
